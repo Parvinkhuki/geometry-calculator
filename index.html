@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/74461efed3.js" crossorigin="anonymous"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+    </style>
+</head>
+<body class="font-sans mx-5 lg:mx-auto lg:max-w-screen-xl" >
+    <header>
+        <div class="w-[100%] h-[100px] flex justify-center items-center bg-cyan-200">
+            <h1 class="text-center py-5 text-4xl font-bold">Geometry calculator</h1>
+        </div>
+    </header>
+    <main>
+      <div class=" flex my-20">
+        <div class="flex-1 grid lg:grid-cols-4 gap-5"> 
+            <div class="card  bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">triangle</h2>
+                  <p>Area (A) =0.5 X b X h</p>
+                  <div class="card-actions">
+                    <div class="flex justify-center items-center gap-2 mx-3 ">
+                        <input type="text" id="base" placeholder="Base"class="p-2 w-2/5 bg-[#F1F1F1]">
+                        <p>cm</p>
+                        <input type="text" id="height" placeholder="height"class="p-2 w-2/5 bg-[#F1F1F1]">
+                        <p>cm</p>
+                    </div>
+                    <p>Area:<span id="areaTriangle">
+
+                    </span> cm<sup>2</sup></p>
+                    <button class="btn w-full bg-cyan-500 hover:bg-cyan-200">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card  bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="./images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Rectangle</h2>
+                  <p>Area (A) = w x l</p>
+                  <div class="card-actions">
+                    <div class="flex justify-center items-center gap-2 mx-3 ">
+                        <input type="text" id="width" placeholder="width"class="p-2 w-2/5 bg-[#F1F1F1]">
+                        <p>cm</p>
+                        <input type="text" id="length" placeholder="length"class="p-2 w-2/5 bg-[#F1F1F1]">
+                        <p>cm</p>
+                    </div>
+                    <p>Area:<span id="areaRectangle">
+
+                    </span> cm<sup>2</sup></p>
+                    <button class="btn w-full bg-cyan-500 hover:bg-cyan-200">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="./images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Parallelogram</h2>
+                  <p>Area (A) =b X h</p>
+                  <div class="card-actions">
+                    <div class="flex justify-center items-center gap-2 mx-3 ">
+                        <input type="text" id="baseP" placeholder="Base"class="p-2 w-2/5 bg-[#F1F1F1]">
+                        <p>cm</p>
+                        <input type="text" id="heightP" placeholder="height"class="p-2 w-2/5 bg-[#F1F1F1]">
+                        <p>cm</p>
+                    </div>
+                    <p>Area:<span id="areaParall">
+
+                    </span> cm<sup>2</sup></p>
+                    <button class="btn w-full bg-cyan-500 hover:bg-cyan-200">calculate</button>
+                 
+                  </div>
+                </div>
+              </div>
+              <div >
+                <div class="w-[350px] bg-white border-2 border-gray-300  p-3 rounded-2xl h-[450px]" >
+                    <h2 class="font-bold text-xl underline text-center my-4">Area calculator</h2>
+                    <ul id="area-calc">
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+      <div class="flex-1 grid lg:grid-cols-4 gap-5 mb-10"> 
+        <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/pentagon.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Pentagon</h2>
+              <p>Area (A) =(5/2) X b X a</p>
+              <div class="card-actions">
+                <div class="flex justify-center items-center gap-2 mx-3 ">
+                    <input type="text" id="BasePen" placeholder="Base"class="p-2 w-2/5 bg-[#F1F1F1]">
+                    <p>cm</p>
+                    <input type="text" id="apothem" placeholder="apothem"class="p-1 w-2/5 bg-[#F1F1F1]">
+                    <p>cm</p>
+                </div>
+                <p>Area:<span id="areaPentagon">
+
+                </span> cm<sup>2</sup></p>
+                <button class="btn w-full bg-cyan-500 hover:bg-cyan-200">calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Rhombus</h2>
+              <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>1</sub> </p>
+              <div class="card-actions">
+                <div class="flex justify-center items-center gap-2 mx-3 ">
+                    <input type="text" id="d1" placeholder="d1"class="p-2 w-2/5 bg-[#F1F1F1]">
+                    <p>cm</p>
+                    <input type="text" id="d2" placeholder="d2"class="p-2 w-2/5 bg-[#F1F1F1]">
+                    <p>cm</p>
+                </div>
+                <p>Area:<span id="areaRhom">
+
+                </span> cm<sup>2</sup></p>
+                <button class="btn w-full bg-cyan-500 hover:bg-cyan-200">calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl ">
+            <figure class="px-10 pt-10">
+              <img src="./images/ellipse.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">ellipse</h2>
+              <p>Area (A) = π X a X b</p>
+              <div class="card-actions">
+                <div class="flex justify-center items-center gap-2 mx-3 ">
+                    <input type="text" id="	Axis1" placeholder="	Axis1"class="p-2 w-2/5 bg-[#F1F1F1]">
+                    <p>cm</p>
+                    <input type="text" id="	Axis2" placeholder="	Axis2"class="p-2 w-2/5 bg-[#F1F1F1]">
+                    <p>cm</p>
+                </div>
+                <p>Area:<span id="areaTriangle">
+
+                </span> cm<sup>2</sup></p>
+                <button class="btn w-full bg-cyan-500 hover:bg-cyan-200">calculate</button>
+             
+              </div>
+            </div>
+          </div>
+         
+        </div>
+
+    </main>
+</body>
+</html>
