@@ -71,6 +71,9 @@ function btn(){
     const heightP= getInputById("height2")
     const sum =baseP*heightP;
     console.log(sum)
+    if(isNaN(baseP)||isNaN(heightP)){
+        return alert("give a num ")
+    }
    setValue("areaParall",sum)
    addToCalculationEntry("Parallelogram", sum)
  }
